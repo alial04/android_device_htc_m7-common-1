@@ -12,7 +12,9 @@ LOCAL_SRC_FILES := \
      ui/GraphicBufferMapper.cpp
 
 LOCAL_SHARED_LIBRARIES := \
-    libbinder libcutils libgui libhardware liblog libsync libui libutils
+    libbinder libcutils libgui libhardware liblog libsync libui libutils libarect
+
+#LOCAL_STATIC_LIBRARIES := libarect
 
 LOCAL_MODULE := libcamera_shim
 LOCAL_MODULE_TAGS := optional
@@ -28,10 +30,11 @@ LOCAL_SRC_FILES := \
     CameraWrapper.cpp
 
 LOCAL_SHARED_LIBRARIES := \
-    libhardware liblog libcamera_client libutils
+    libhardware liblog libcamera_client libutils libbase
 
 LOCAL_MODULE_RELATIVE_PATH := hw
 LOCAL_MODULE := camera.$(TARGET_BOARD_PLATFORM)
 LOCAL_MODULE_TAGS := optional
 
 include $(BUILD_SHARED_LIBRARY)
+

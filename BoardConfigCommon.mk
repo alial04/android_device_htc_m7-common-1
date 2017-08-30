@@ -32,7 +32,7 @@ LOCAL_PATH := device/htc/m7-common
 
 # Audio
 BOARD_HAVE_HTC_CSDCLIENT := true
-USE_CUSTOM_AUDIO_POLICY := 1
+USE_CUSTOM_AUDIO_POLICY := 0
 
 # Bluetooth
 BOARD_CUSTOM_BT_CONFIG := $(LOCAL_PATH)/bluetooth/libbt_vndcfg.txt
@@ -67,7 +67,7 @@ OVERRIDE_RS_DRIVER := libRSDriver_adreno.so
 
 # Kernel
 BOARD_KERNEL_BASE := 0x80600000
-BOARD_KERNEL_CMDLINE := console=none androidboot.hardware=qcom user_debug=31
+BOARD_KERNEL_CMDLINE := console=none androidboot.hardware=qcom user_debug=31 androidboot.selinux=permissive
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01800000
 TARGET_KERNEL_CONFIG := m7_defconfig
@@ -87,9 +87,9 @@ BOARD_PROVIDES_LIBRIL := true
 BOARD_RIL_CLASS := ../../../$(LOCAL_PATH)/ril
 
 # SELinux
--include device/qcom/sepolicy/sepolicy.mk
+#-include device/lineage/sepolicy/qcom/sepolicy.mk
 
-BOARD_SEPOLICY_DIRS += device/htc/m7-common/sepolicy
+#BOARD_SEPOLICY_DIRS += device/htc/m7-common/sepolicy
 
 # Wifi
 BOARD_HOSTAPD_DRIVER             := NL80211
