@@ -45,13 +45,3 @@ LOCAL_MODULE := libshim_wvm
 LOCAL_MODULE_TAGS := optional
 
 include $(BUILD_SHARED_LIBRARY)
-
-include $(CLEAR_VARS)
-
-LOCAL_SRC_FILES := \
-    vcsfp_shim.cpp
-
-LOCAL_MODULE := libvcsfp_shim
-LOCAL_MODULE_TAGS := optional
-
-include $(BUILD_SHARED_LIBRARY)

@@ -139,9 +139,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libshim_wvm
 
-PRODUCT_PACKAGES += \
-    libvcsfp_ship
-
 # WiFi
 PRODUCT_PACKAGES += \
     libnetcmdiface
