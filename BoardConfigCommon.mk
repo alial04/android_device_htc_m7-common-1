@@ -30,6 +30,8 @@
 
 LOCAL_PATH := device/htc/m7-common
 
+TARGET_NEEDS_GCC_LIBC := true
+
 # Audio
 BOARD_HAVE_HTC_CSDCLIENT := true
 USE_CUSTOM_AUDIO_POLICY := 0
